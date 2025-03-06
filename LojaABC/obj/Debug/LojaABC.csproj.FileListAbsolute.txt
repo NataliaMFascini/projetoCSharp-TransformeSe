@@ -9,3 +9,5 @@ C:\Users\natalia.mfascini\Documents\Visual Studio 2019\TransformeSe\LojaABC\obj\
 C:\Users\natalia.mfascini\Documents\Visual Studio 2019\TransformeSe\LojaABC\obj\Debug\LojaABC.pdb
 C:\Users\natalia.mfascini\Documents\Visual Studio 2019\TransformeSe\LojaABC\obj\Debug\LojaABC.frmSplash.resources
 C:\Users\natalia.mfascini\Documents\Visual Studio 2019\TransformeSe\LojaABC\obj\Debug\LojaABC.frmLogin.resources
+C:\Users\natalia.mfascini\Documents\Visual Studio 2019\TransformeSe\LojaABC\obj\Debug\LojaABC.frmMenuPrincipal.resources
+C:\Users\natalia.mfascini\Documents\Visual Studio 2019\TransformeSe\LojaABC\obj\Debug\LojaABC.frmFuncionario.resources

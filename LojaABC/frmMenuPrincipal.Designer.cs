@@ -62,7 +62,7 @@ namespace LojaABC
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.Location = new System.Drawing.Point(194, 12);
+            this.button2.Location = new System.Drawing.Point(205, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(176, 230);
             this.button2.TabIndex = 1;
@@ -77,7 +77,7 @@ namespace LojaABC
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.Location = new System.Drawing.Point(376, 12);
+            this.button3.Location = new System.Drawing.Point(401, 12);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(176, 230);
             this.button3.TabIndex = 2;
@@ -92,7 +92,7 @@ namespace LojaABC
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.Location = new System.Drawing.Point(558, 12);
+            this.button4.Location = new System.Drawing.Point(596, 12);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(176, 230);
             this.button4.TabIndex = 3;
@@ -107,7 +107,7 @@ namespace LojaABC
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.Location = new System.Drawing.Point(558, 263);
+            this.button5.Location = new System.Drawing.Point(596, 248);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(176, 230);
             this.button5.TabIndex = 7;
@@ -122,7 +122,7 @@ namespace LojaABC
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button6.Location = new System.Drawing.Point(376, 263);
+            this.button6.Location = new System.Drawing.Point(401, 248);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(176, 230);
             this.button6.TabIndex = 6;
@@ -137,7 +137,7 @@ namespace LojaABC
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button7.Location = new System.Drawing.Point(194, 263);
+            this.button7.Location = new System.Drawing.Point(205, 248);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(176, 230);
             this.button7.TabIndex = 5;
@@ -152,7 +152,7 @@ namespace LojaABC
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
             this.button8.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button8.Location = new System.Drawing.Point(12, 263);
+            this.button8.Location = new System.Drawing.Point(12, 248);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(176, 230);
             this.button8.TabIndex = 4;
@@ -165,14 +165,14 @@ namespace LojaABC
             // 
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button9.Location = new System.Drawing.Point(558, 514);
+            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
+            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button9.Location = new System.Drawing.Point(596, 499);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(176, 35);
+            this.button9.Size = new System.Drawing.Size(176, 50);
             this.button9.TabIndex = 8;
             this.button9.Text = "Vol&tar";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button9.UseVisualStyleBackColor = true;
             // 
             // frmMenuPrincipal
