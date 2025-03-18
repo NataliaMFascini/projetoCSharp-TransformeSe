@@ -138,7 +138,6 @@ namespace LojaABC
             this.rdbMasculino.TabStop = true;
             this.rdbMasculino.Text = "Masculino";
             this.rdbMasculino.UseVisualStyleBackColor = true;
-            this.rdbMasculino.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // rdbNaoInformar
             // 
@@ -150,7 +149,6 @@ namespace LojaABC
             this.rdbNaoInformar.TabStop = true;
             this.rdbNaoInformar.Text = "Não desejo informar";
             this.rdbNaoInformar.UseVisualStyleBackColor = true;
-            this.rdbNaoInformar.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // rdbFeminino
             // 
@@ -162,7 +160,6 @@ namespace LojaABC
             this.rdbFeminino.TabStop = true;
             this.rdbFeminino.Text = "Feminino";
             this.rdbFeminino.UseVisualStyleBackColor = true;
-            this.rdbFeminino.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // dtpNascimento
             // 
@@ -276,6 +273,7 @@ namespace LojaABC
             this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // btnPesquisar
             // 

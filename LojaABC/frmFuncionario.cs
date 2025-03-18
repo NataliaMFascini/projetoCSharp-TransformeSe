@@ -17,24 +17,11 @@ namespace LojaABC
             InitializeComponent();
         }
 
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        private void btnVoltar_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
-        {
-
+            frmMenuPrincipal voltar = new frmMenuPrincipal();
+            voltar.Show();
+            this.Hide();
         }
     }
 }
