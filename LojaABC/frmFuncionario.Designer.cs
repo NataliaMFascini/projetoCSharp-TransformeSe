@@ -121,7 +121,7 @@ namespace LojaABC
             this.gpbSexo.Controls.Add(this.rdbMasculino);
             this.gpbSexo.Controls.Add(this.rdbNaoInformar);
             this.gpbSexo.Controls.Add(this.rdbFeminino);
-            this.gpbSexo.Location = new System.Drawing.Point(6, 138);
+            this.gpbSexo.Location = new System.Drawing.Point(6, 135);
             this.gpbSexo.Name = "gpbSexo";
             this.gpbSexo.Size = new System.Drawing.Size(202, 117);
             this.gpbSexo.TabIndex = 7;
@@ -214,7 +214,7 @@ namespace LojaABC
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(114, 54);
+            this.txtNome.Location = new System.Drawing.Point(112, 54);
             this.txtNome.MaxLength = 50;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(338, 26);
@@ -300,6 +300,7 @@ namespace LojaABC
             this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnExcluir
             // 
@@ -339,6 +340,7 @@ namespace LojaABC
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnNovo
             // 
@@ -352,6 +354,7 @@ namespace LojaABC
             this.btnNovo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // gpbEndereco
             // 
@@ -424,7 +427,7 @@ namespace LojaABC
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(198, 103);
+            this.txtEstado.Location = new System.Drawing.Point(198, 104);
             this.txtEstado.MaxLength = 100;
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(155, 26);
@@ -441,7 +444,7 @@ namespace LojaABC
             // 
             // txtCidade
             // 
-            this.txtCidade.Location = new System.Drawing.Point(6, 103);
+            this.txtCidade.Location = new System.Drawing.Point(6, 104);
             this.txtCidade.MaxLength = 100;
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(186, 26);
@@ -538,6 +541,7 @@ namespace LojaABC
             this.Name = "frmFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loja ABC - Funcionários";
+            this.Load += new System.EventHandler(this.frmFuncionario_Load);
             this.gpbDados.ResumeLayout(false);
             this.gpbDados.PerformLayout();
             this.gpbSexo.ResumeLayout(false);
