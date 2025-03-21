@@ -113,7 +113,7 @@ namespace LojaABC
             txtCidade.Clear();
             txtComplemento.Clear();
             txtEstado.Clear();
-            cbbUf.Items.Clear();
+            cbbUf.Text = "";
 
             txtNome.Focus();
         }
@@ -133,16 +133,81 @@ namespace LojaABC
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             //para focar no campo vazio, fazer um if para cada checagem
-            if (txtNome.Text.Equals("") || txtEmail.Text.Equals("") || mskCpf.Text.Equals("   .   .   -") || mskCelular.Text.Equals("     -") || txtLogradouro.Text.Equals("") || txtNumero.Text.Equals("") || txtComplemento.Text.Equals("") || txtCidade.Text.Equals("") || txtEstado.Text.Equals("") || mskCep.Text.Equals("     -") || cbbUf.Text.Equals(""))
+            if (txtNome.Text.Equals(""))
             {
-                MessageBox.Show("Favor preencher os campos.", "Erro",MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                erroCadastro("Nome");
+                txtNome.Focus();
+            }
+            else if (txtEmail.Text.Equals(""))
+            {
+                erroCadastro("E-mail");
+                txtEmail.Focus();
+            }
+            else if (mskCpf.Text.Equals("   .   .   -"))
+            {
+                erroCadastro("CPF");
+                mskCpf.Focus();
+            }
+            else if (mskCelular.Text.Equals("     -"))
+            {
+                erroCadastro("Celular");
+                mskCelular.Focus();
+            }
+            else if (txtLogradouro.Text.Equals(""))
+            {
+                erroCadastro("Logadouro");
+                txtLogradouro.Focus();
+            }
+            else if (mskCep.Text.Equals("     -"))
+            {
+                erroCadastro("CEP");
+                mskCep.Focus();
+            }
+            else if (txtNumero.Text.Equals(""))
+            {
+                erroCadastro("Nº");
+                txtNumero.Focus();
+            }
+            else if (txtComplemento.Text.Equals(""))
+            {
+                erroCadastro("Complemento");
+                txtComplemento.Focus();
+            }
+            else if (txtCidade.Text.Equals(""))
+            {
+                erroCadastro("Cidade");
+                txtCidade.Focus();
+            }
+            else if (txtEstado.Text.Equals(""))
+            {
+                erroCadastro("Estado");
+                txtEstado.Focus();
+            }
+            else if (cbbUf.Text.Equals(""))
+            {
+                erroCadastro("UF");
+                cbbUf.Focus();
             }
             else
             {
                 MessageBox.Show("Cadastro realizado com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
-                limparCampos() ;
+                limparCampos();
                 desabilitarCampos();
+
+                btnNovo.Enabled = true;
+                btnNovo.Focus();
             }
+        }
+
+        private void erroCadastro(string nomeCampo)
+        {
+            MessageBox.Show("O campo " + nomeCampo + " é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            frmPesquisarFuncionarios abrir = new frmPesquisarFuncionarios();
+            abrir.ShowDialog();
         }
     }
 }

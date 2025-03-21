@@ -57,7 +57,7 @@ namespace LojaABC
             // 
             // txtDescricao
             // 
-            this.txtDescricao.Location = new System.Drawing.Point(6, 67);
+            this.txtDescricao.Location = new System.Drawing.Point(6, 69);
             this.txtDescricao.MaxLength = 100;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(523, 26);
@@ -66,7 +66,7 @@ namespace LojaABC
             // lblDescricao
             // 
             this.lblDescricao.AutoSize = true;
-            this.lblDescricao.Location = new System.Drawing.Point(6, 44);
+            this.lblDescricao.Location = new System.Drawing.Point(6, 46);
             this.lblDescricao.Name = "lblDescricao";
             this.lblDescricao.Size = new System.Drawing.Size(80, 20);
             this.lblDescricao.TabIndex = 2;
@@ -75,22 +75,20 @@ namespace LojaABC
             // rdbNome
             // 
             this.rdbNome.AutoSize = true;
-            this.rdbNome.Location = new System.Drawing.Point(244, 25);
+            this.rdbNome.Location = new System.Drawing.Point(259, 19);
             this.rdbNome.Name = "rdbNome";
             this.rdbNome.Size = new System.Drawing.Size(69, 24);
             this.rdbNome.TabIndex = 2;
-            this.rdbNome.TabStop = true;
             this.rdbNome.Text = "Nome";
             this.rdbNome.UseVisualStyleBackColor = true;
             // 
             // rdbCodigo
             // 
             this.rdbCodigo.AutoSize = true;
-            this.rdbCodigo.Location = new System.Drawing.Point(121, 25);
+            this.rdbCodigo.Location = new System.Drawing.Point(139, 19);
             this.rdbCodigo.Name = "rdbCodigo";
             this.rdbCodigo.Size = new System.Drawing.Size(77, 24);
             this.rdbCodigo.TabIndex = 1;
-            this.rdbCodigo.TabStop = true;
             this.rdbCodigo.Text = "Código";
             this.rdbCodigo.UseVisualStyleBackColor = true;
             // 
@@ -116,6 +114,7 @@ namespace LojaABC
             this.btnPesquisar.Text = "&Pesquisar";
             this.btnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // btnLimpar
             // 
@@ -129,6 +128,7 @@ namespace LojaABC
             this.btnLimpar.Text = "&Limpar";
             this.btnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // frmPesquisarFuncionarios
             // 
