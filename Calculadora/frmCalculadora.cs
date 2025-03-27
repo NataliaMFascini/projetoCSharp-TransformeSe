@@ -56,5 +56,63 @@ namespace Calculadora
             int MenuCount = GetMenuItemCount(hMenu) - 1;
             RemoveMenu(hMenu, MenuCount, MF_BYCOMMAND);
         }
+
+        private void btnCalcular_Click(object sender, EventArgs e)
+        {
+            //declarando as variáveis
+            double num1, num2, resp = 0;
+
+            try
+            {
+                //inicializar as variaveis
+                num1 = Convert.ToDouble(txtNumero1.Text);
+                num2 = Convert.ToDouble(txtNumero2.Text);
+
+                if (!rdbSomar.Checked && !rdbSubtrair.Checked && !rdbMultiplicar.Checked && !rdbDividir.Checked)
+                {
+                    MessageBox.Show("Selecione uma operação.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                    //limparCampos();
+                }
+                else
+                {
+                    //criando a estrutura de decisão
+                    if (rdbSomar.Checked)
+                    {
+                        //somando valores
+                        resp = num1 + num2;
+                    }
+                    if (rdbSubtrair.Checked)
+                    {
+                        //subtraindo valores
+                        resp = num1 - num2;
+                    }
+                    if (rdbMultiplicar.Checked)
+                    {
+                        //multiplicando valores
+                        resp = num1 * num2;
+                    }
+                    if (rdbDividir.Checked)
+                    {
+                        if (num2 == 0)
+                        {
+                            MessageBox.Show("Impossível dividir por 0. Deletando o mundo.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                            limparCampos();
+                        }
+                        else
+                        {
+                            //dividindo valores
+                            resp = num1 / num2;
+                        }
+                    }
+
+                    txtResposta.Text = resp.ToString();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Favor inserir valores válidos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                limparCampos();
+            }
+        }
     }
 }

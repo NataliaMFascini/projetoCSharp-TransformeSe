@@ -2,9 +2,9 @@ C:\Users\natalia.mfascini\Documents\Visual Studio 2019\TransformeSe\Calculadora\
 C:\Users\natalia.mfascini\Documents\Visual Studio 2019\TransformeSe\Calculadora\bin\Debug\Calculadora.exe
 C:\Users\natalia.mfascini\Documents\Visual Studio 2019\TransformeSe\Calculadora\bin\Debug\Calculadora.pdb
 C:\Users\natalia.mfascini\Documents\Visual Studio 2019\TransformeSe\Calculadora\obj\Debug\Calculadora.csproj.AssemblyReference.cache
-C:\Users\natalia.mfascini\Documents\Visual Studio 2019\TransformeSe\Calculadora\obj\Debug\Calculadora.Form1.resources
 C:\Users\natalia.mfascini\Documents\Visual Studio 2019\TransformeSe\Calculadora\obj\Debug\Calculadora.Properties.Resources.resources
 C:\Users\natalia.mfascini\Documents\Visual Studio 2019\TransformeSe\Calculadora\obj\Debug\Calculadora.csproj.GenerateResource.cache
 C:\Users\natalia.mfascini\Documents\Visual Studio 2019\TransformeSe\Calculadora\obj\Debug\Calculadora.csproj.CoreCompileInputs.cache
 C:\Users\natalia.mfascini\Documents\Visual Studio 2019\TransformeSe\Calculadora\obj\Debug\Calculadora.exe
 C:\Users\natalia.mfascini\Documents\Visual Studio 2019\TransformeSe\Calculadora\obj\Debug\Calculadora.pdb
+C:\Users\natalia.mfascini\Documents\Visual Studio 2019\TransformeSe\Calculadora\obj\Debug\Calculadora.frmCalculadora.resources

@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\natalia.mfascini\\Documents\\Visual Studio 2019\\TransformeSe\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AA25534F-0BB4-429F-9733-8BC54E5DAD17}|Calculadora\\Calculadora.csproj|c:\\users\\natalia.mfascini\\documents\\visual studio 2019\\transformese\\calculadora\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AA25534F-0BB4-429F-9733-8BC54E5DAD17}|Calculadora\\Calculadora.csproj|solutionrelative:calculadora\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AA25534F-0BB4-429F-9733-8BC54E5DAD17}|Calculadora\\Calculadora.csproj|C:\\Users\\natalia.mfascini\\Documents\\Visual Studio 2019\\TransformeSe\\calculadora\\frmcalculadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA25534F-0BB4-429F-9733-8BC54E5DAD17}|Calculadora\\Calculadora.csproj|solutionrelative:calculadora\\frmcalculadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AA25534F-0BB4-429F-9733-8BC54E5DAD17}|Calculadora\\Calculadora.csproj|c:\\users\\natalia.mfascini\\documents\\visual studio 2019\\transformese\\calculadora\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AA25534F-0BB4-429F-9733-8BC54E5DAD17}|Calculadora\\Calculadora.csproj|solutionrelative:calculadora\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{AA25534F-0BB4-429F-9733-8BC54E5DAD17}|Calculadora\\Calculadora.csproj|c:\\users\\natalia.mfascini\\documents\\visual studio 2019\\transformese\\calculadora\\frmcalculadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AA25534F-0BB4-429F-9733-8BC54E5DAD17}|Calculadora\\Calculadora.csproj|solutionrelative:calculadora\\frmcalculadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,12 +23,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\natalia.mfascini\\Documents\\Visual Studio 2019\\TransformeSe\\Calculadora\\Form1.cs",
-              "RelativeDocumentMoniker": "Calculadora\\Form1.cs",
-              "ToolTip": "C:\\Users\\natalia.mfascini\\Documents\\Visual Studio 2019\\TransformeSe\\Calculadora\\Form1.cs",
-              "RelativeToolTip": "Calculadora\\Form1.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAUwDgAAAA3AAAAAAAAAA==",
+              "Title": "frmCalculadora.cs",
+              "DocumentMoniker": "C:\\Users\\natalia.mfascini\\Documents\\Visual Studio 2019\\TransformeSe\\Calculadora\\frmCalculadora.cs",
+              "RelativeDocumentMoniker": "Calculadora\\frmCalculadora.cs",
+              "ToolTip": "C:\\Users\\natalia.mfascini\\Documents\\Visual Studio 2019\\TransformeSe\\Calculadora\\frmCalculadora.cs",
+              "RelativeToolTip": "Calculadora\\frmCalculadora.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAADwv0kAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-21T19:57:36.643Z",
               "EditorCaption": ""
@@ -36,11 +36,11 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\natalia.mfascini\\Documents\\Visual Studio 2019\\TransformeSe\\Calculadora\\Form1.cs",
-              "RelativeDocumentMoniker": "Calculadora\\Form1.cs",
-              "ToolTip": "C:\\Users\\natalia.mfascini\\Documents\\Visual Studio 2019\\TransformeSe\\Calculadora\\Form1.cs [Design]",
-              "RelativeToolTip": "Calculadora\\Form1.cs [Design]",
+              "Title": "frmCalculadora.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\natalia.mfascini\\Documents\\Visual Studio 2019\\TransformeSe\\Calculadora\\frmCalculadora.cs",
+              "RelativeDocumentMoniker": "Calculadora\\frmCalculadora.cs",
+              "ToolTip": "C:\\Users\\natalia.mfascini\\Documents\\Visual Studio 2019\\TransformeSe\\Calculadora\\frmCalculadora.cs [Design]",
+              "RelativeToolTip": "Calculadora\\frmCalculadora.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-21T19:43:57.453Z",
               "EditorCaption": " [Design]"
