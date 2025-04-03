@@ -22,11 +22,19 @@ namespace LojaABC
         [DllImport("user32")]
         static extern int GetMenuItemCount(IntPtr hWnd);
 
+        //pode-se ter dois metodos construtores, contanto que os parametros sejam diferentes
         public frmFuncionario()
         {
             InitializeComponent();
             //executando desabilitar os campos
             desabilitarCampos();
+        }
+        public frmFuncionario(string descricao)
+        {
+            InitializeComponent();
+            //executando desabilitar os campos
+            desabilitarCampos();
+            txtNome.Text = descricao;
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -201,13 +209,14 @@ namespace LojaABC
 
         private void erroCadastro(string nomeCampo)
         {
-            MessageBox.Show("O campo " + nomeCampo + " é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+            MessageBox.Show(nomeCampo + " é um campo obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             frmPesquisarFuncionarios abrir = new frmPesquisarFuncionarios();
-            abrir.ShowDialog();
+            abrir.Show();
+            this.Hide();
         }
     }
 }

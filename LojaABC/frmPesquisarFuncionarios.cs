@@ -56,14 +56,65 @@ namespace LojaABC
             ltbPesquisar.Items.Clear();
 
             txtDescricao.Clear();
+            txtDescricao.Enabled = false;
             txtDescricao.Focus();
+
+            btnPesquisar.Enabled = false;
+            btnLimpar.Enabled = false;
+        }
+        public void limparCamposPesquisar()
+        {
+            rdbCodigo.Checked = false;
+            rdbNome.Checked = false;
+
+            txtDescricao.Clear();
+            txtDescricao.Enabled = false;
+            txtDescricao.Focus();
+
+            btnPesquisar.Enabled = false;
+            btnLimpar.Enabled = false;
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            ltbPesquisar.Items.Clear();
-            ltbPesquisar.Items.Add(txtDescricao.Text);
-            
+            if (string.IsNullOrEmpty(txtDescricao.Text))
+            {
+                MessageBox.Show("Favor preencher o campo da descrição.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtDescricao.Focus();
+            }
+            else
+            {
+                ltbPesquisar.Items.Clear();
+                ltbPesquisar.Items.Add(txtDescricao.Text);
+                limparCamposPesquisar();
+            }
+        }
+
+        private void rdbCodigo_CheckedChanged(object sender, EventArgs e)
+        {
+            habilitarCampos();
+        }
+
+        private void rdbNome_CheckedChanged(object sender, EventArgs e)
+        {
+            habilitarCampos();
+        }
+
+        private void habilitarCampos()
+        {
+            txtDescricao.Enabled = true;
+            txtDescricao.Focus();
+
+            btnPesquisar.Enabled = true;
+            btnLimpar.Enabled = true;
+        }
+
+        private void ltbPesquisar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string descricao = ltbPesquisar.SelectedItem.ToString();
+            frmFuncionario abrir = new frmFuncionario(descricao);
+            abrir.Show();
+            this.Hide();
         }
     }
 }

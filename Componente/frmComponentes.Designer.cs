@@ -42,12 +42,19 @@
             this.lblListarProdutos = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
+            this.btnCarregar = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
             this.gpbComponentes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImagens)).BeginInit();
             this.SuspendLayout();
             // 
             // gpbComponentes
             // 
+            this.gpbComponentes.Controls.Add(this.btnSair);
+            this.gpbComponentes.Controls.Add(this.btnLimpar);
+            this.gpbComponentes.Controls.Add(this.btnCarregar);
             this.gpbComponentes.Controls.Add(this.pcbImagens);
             this.gpbComponentes.Controls.Add(this.ckbBanana);
             this.gpbComponentes.Controls.Add(this.ckbMesa);
@@ -72,7 +79,7 @@
             // 
             this.pcbImagens.Location = new System.Drawing.Point(454, 60);
             this.pcbImagens.Name = "pcbImagens";
-            this.pcbImagens.Size = new System.Drawing.Size(251, 224);
+            this.pcbImagens.Size = new System.Drawing.Size(250, 224);
             this.pcbImagens.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcbImagens.TabIndex = 8;
             this.pcbImagens.TabStop = false;
@@ -155,6 +162,7 @@
             this.ltbListarProdutos.Name = "ltbListarProdutos";
             this.ltbListarProdutos.Size = new System.Drawing.Size(251, 224);
             this.ltbListarProdutos.TabIndex = 3;
+            this.ltbListarProdutos.SelectedIndexChanged += new System.EventHandler(this.ltbListarProdutos_SelectedIndexChanged);
             // 
             // lblListarProdutos
             // 
@@ -183,11 +191,45 @@
             this.lblNome.TabIndex = 0;
             this.lblNome.Text = "Nome";
             // 
+            // btnCarregar
+            // 
+            this.btnCarregar.Location = new System.Drawing.Point(454, 23);
+            this.btnCarregar.Name = "btnCarregar";
+            this.btnCarregar.Size = new System.Drawing.Size(122, 31);
+            this.btnCarregar.TabIndex = 9;
+            this.btnCarregar.Text = "&Carregar imagem";
+            this.btnCarregar.UseVisualStyleBackColor = true;
+            this.btnCarregar.Click += new System.EventHandler(this.btnCarregar_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.Location = new System.Drawing.Point(326, 23);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(122, 31);
+            this.btnLimpar.TabIndex = 10;
+            this.btnLimpar.Text = "&Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
+            // btnSair
+            // 
+            this.btnSair.Location = new System.Drawing.Point(582, 23);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(122, 31);
+            this.btnSair.TabIndex = 1;
+            this.btnSair.Text = "&Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // frmComponentes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(743, 325);
+            this.ClientSize = new System.Drawing.Size(751, 325);
             this.Controls.Add(this.gpbComponentes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -217,5 +259,9 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.PictureBox pcbImagens;
+        private System.Windows.Forms.Button btnCarregar;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Button btnSair;
     }
 }
