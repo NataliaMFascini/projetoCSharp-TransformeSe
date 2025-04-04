@@ -123,7 +123,7 @@ namespace LojaABC
             this.gpbSexo.Controls.Add(this.rdbFeminino);
             this.gpbSexo.Location = new System.Drawing.Point(6, 135);
             this.gpbSexo.Name = "gpbSexo";
-            this.gpbSexo.Size = new System.Drawing.Size(202, 117);
+            this.gpbSexo.Size = new System.Drawing.Size(217, 117);
             this.gpbSexo.TabIndex = 7;
             this.gpbSexo.TabStop = false;
             this.gpbSexo.Text = "Sexo";

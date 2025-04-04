@@ -121,7 +121,7 @@
   <data name="btnVoltar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAWCAYAAAChWZ5EAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAc8AAAHPAEqxoCGAAABlUlE
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAc7AAAHOwF4gib5AAABlUlE
         QVRIS8XWyyuEURjH8cGCsMDC3U5RSrFkgZKycVu6RUr+A8l/YGlJyEbGLXaShXLZKDaKhbJBuUuIcvv+
         Dq+QmUmemfnVp+ac963nmfecM+/4/pkELOM1hDtsoQ+5MEs85nGDqyDuoUaesIEKmCQW+ShFSQC6VoV+
         7EGNHMCsib+kAItQE6vIQcjopuL3jyYpxC6e0auJYMmG1ngf5ZowipZDT2HTjQIkC3PQjUeohlUqoY15
@@ -169,7 +169,7 @@
   <data name="btnExcluir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAAQpJREFUWEft1bFLAmEcxvEXF6VFF6dA3SS3tqAxBEEcRGjxL/AfCRpDm3KLCB0b
+        vgAADr4B6kKxwAAAAQpJREFUWEft1bFLAmEcxvEXF6VFF6dA3SS3tqAxBEEcRGjxL/AfCRpDm3KLCB0b
         inBzcdDRliBy0Na2aAn7/u7XweHia/fqIO8DH3hOjuM58Tzj4+Pzz6RQXJHDznKJ5YofZLGTXOEWB3/k
         7mXEIZwniTa6EVO8Ro7vIAPuI5+JBmKnALn4DTobmKCP2AkHZIIj+1zAyYA8ZMAYow3M0UPsJHCND7Qs
         yfmfOIaTNPGi1SpVLLS6SXRAGiWtQT/SGvxGwr7VAXXMtAaP2ZtWcw55NCV+gB+w3wPOMNBqynjWaip4
@@ -179,7 +179,7 @@
   <data name="btnAlterar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAADXoAAA16AFeLlshAAACgElE
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAADXnAAA15wEo4PU7AAACgElE
         QVRYR+3WS6hNURzH8e39FjKUZyEDipSRG3mGZGzCQEkmJgYGRDHwKDIxUG4UMZCkyERRyog8ion3nVzy
         yPvt+92dv9bd7XM8rn0udX/16bbP2Xf919mP9V9Zd/7H9MVUDMuPuiAz8BDnMBe90NS04C2+4Sn2YDwq
         TX9MwDzswkc4gXATazAYfy0WnYWtOAsv+zukhVNO6hCKk+iB37pNFl6OU3iGsmJlvuA4hiAyEttwDCvQ

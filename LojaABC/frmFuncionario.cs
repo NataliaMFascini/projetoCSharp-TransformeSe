@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+//importando a biblioteca do banco de dados(todas as janelas que usam o banco de dados devem importar)
+using MySql.Data.MySqlClient;
 
 namespace LojaABC
 {
@@ -35,6 +37,7 @@ namespace LojaABC
             //executando desabilitar os campos
             desabilitarCampos();
             txtNome.Text = descricao;
+            habilitarCampos_Pesquisar();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -96,6 +99,32 @@ namespace LojaABC
             btnCadastrar.Enabled = true;
             btnAlterar.Enabled = false;
             btnExcluir.Enabled = false;
+            btnLimpar.Enabled = true;
+
+            btnNovo.Enabled = false;
+
+            txtNome.Focus();
+        }
+        public void habilitarCampos_Pesquisar()
+        {
+            txtNome.Enabled = true;
+            txtEmail.Enabled = true;
+            mskCpf.Enabled = true;
+            dtpNascimento.Enabled = true;
+            mskCelular.Enabled = true;
+            gpbSexo.Enabled = true;
+
+            txtLogradouro.Enabled = true;
+            txtNumero.Enabled = true;
+            mskCep.Enabled = true;
+            txtCidade.Enabled = true;
+            txtComplemento.Enabled = true;
+            txtEstado.Enabled = true;
+            cbbUf.Enabled = true;
+
+            btnCadastrar.Enabled = false;
+            btnAlterar.Enabled = true;
+            btnExcluir.Enabled = true;
             btnLimpar.Enabled = true;
 
             btnNovo.Enabled = false;
@@ -217,6 +246,11 @@ namespace LojaABC
             frmPesquisarFuncionarios abrir = new frmPesquisarFuncionarios();
             abrir.Show();
             this.Hide();
+        }
+
+        public void cadastrarFuncionarios()
+        {
+            MySqlCommand comm = new MySqlCommand();
         }
     }
 }
