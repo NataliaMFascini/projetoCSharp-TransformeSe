@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 //importando a biblioteca do banco de dados(todas as janelas que usam o banco de dados devem importar)
 using MySql.Data.MySqlClient;
+using MosaicoSolutions.ViaCep;
 
 namespace LojaABC
 {
@@ -70,7 +71,7 @@ namespace LojaABC
             mskCep.Enabled = false;
             txtCidade.Enabled = false;
             txtComplemento.Enabled = false;
-            txtEstado.Enabled = false;
+            txtBairro.Enabled = false;
             cbbUf.Enabled = false;
 
             btnCadastrar.Enabled = false;
@@ -93,7 +94,7 @@ namespace LojaABC
             mskCep.Enabled = true;
             txtCidade.Enabled = true;
             txtComplemento.Enabled = true;
-            txtEstado.Enabled = true;
+            txtBairro.Enabled = true;
             cbbUf.Enabled = true;
 
             btnCadastrar.Enabled = true;
@@ -119,7 +120,7 @@ namespace LojaABC
             mskCep.Enabled = true;
             txtCidade.Enabled = true;
             txtComplemento.Enabled = true;
-            txtEstado.Enabled = true;
+            txtBairro.Enabled = true;
             cbbUf.Enabled = true;
 
             btnCadastrar.Enabled = false;
@@ -149,7 +150,7 @@ namespace LojaABC
             mskCep.Clear();
             txtCidade.Clear();
             txtComplemento.Clear();
-            txtEstado.Clear();
+            txtBairro.Clear();
             cbbUf.Text = "";
 
             txtNome.Focus();
@@ -215,10 +216,10 @@ namespace LojaABC
                 erroCadastro("Cidade");
                 txtCidade.Focus();
             }
-            else if (txtEstado.Text.Equals(""))
+            else if (txtBairro.Text.Equals(""))
             {
                 erroCadastro("Estado");
-                txtEstado.Focus();
+                txtBairro.Focus();
             }
             else if (cbbUf.Text.Equals(""))
             {
@@ -227,30 +228,101 @@ namespace LojaABC
             }
             else
             {
-                MessageBox.Show("Cadastro realizado com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
-                limparCampos();
-                desabilitarCampos();
+                if (cadastrarFuncionarios() == 1)
+                {
+                    MessageBox.Show("Cadastro realizado com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                    limparCampos();
+                    desabilitarCampos();
 
-                btnNovo.Enabled = true;
-                btnNovo.Focus();
+                    btnNovo.Enabled = true;
+                    btnNovo.Focus();
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao cadastrar funcionário.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                }
             }
         }
+        public int cadastrarFuncionarios()
+        {
+            MySqlCommand comm = new MySqlCommand();
 
+            comm.CommandText = "insert into tbFuncionarios(nome, email, cpf, dataNasc, telCel, sexo, logradouro, cep, numero, complemento, bairro, cidade, uf) values (@nome, @email, @cpf, @dataNasc, @telCel, @sexo, @logradouro, @cep, @numero, @complemento, @bairro, @cidade, @uf);";
+            comm.CommandType = CommandType.Text;
+
+            comm.Parameters.Clear();
+
+            comm.Parameters.Add("@nome", MySqlDbType.VarChar, 100).Value = txtNome.Text;
+            comm.Parameters.Add("@email", MySqlDbType.VarChar, 100).Value = txtEmail.Text;
+            comm.Parameters.Add("@cpf", MySqlDbType.VarChar, 14).Value = mskCpf.Text;
+            comm.Parameters.Add("@dataNasc", MySqlDbType.Date).Value = dtpNascimento.Value;
+            comm.Parameters.Add("@telCel", MySqlDbType.VarChar, 10).Value = mskCelular.Text;
+            if (rdbFeminino.Checked)
+            {
+                comm.Parameters.Add("@sexo", MySqlDbType.VarChar, 1).Value = "F";
+            }
+            if (rdbMasculino.Checked)
+            {
+                comm.Parameters.Add("@sexo", MySqlDbType.VarChar, 1).Value = "M";
+            }
+            if (rdbNaoInformar.Checked)
+            {
+                comm.Parameters.Add("@sexo", MySqlDbType.VarChar, 1).Value = "N";
+            }
+            comm.Parameters.Add("@logradouro", MySqlDbType.VarChar, 100).Value = txtLogradouro.Text;
+            comm.Parameters.Add("@cep", MySqlDbType.VarChar, 9).Value = mskCep.Text;
+            comm.Parameters.Add("@numero", MySqlDbType.VarChar, 10).Value = txtNumero.Text;
+            comm.Parameters.Add("@complemento", MySqlDbType.VarChar, 100).Value = txtComplemento.Text;
+            comm.Parameters.Add("@bairro", MySqlDbType.VarChar, 100).Value = txtBairro.Text;
+            comm.Parameters.Add("@cidade", MySqlDbType.VarChar, 100).Value = txtCidade.Text;
+            comm.Parameters.Add("@uf", MySqlDbType.VarChar, 2).Value = cbbUf.Text;
+
+            comm.Connection = Conexao.obterConexao();
+            int resp = comm.ExecuteNonQuery();
+
+            Conexao.fecharConexao();
+
+            return resp;
+        }
         private void erroCadastro(string nomeCampo)
         {
             MessageBox.Show(nomeCampo + " é um campo obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
         }
-
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             frmPesquisarFuncionarios abrir = new frmPesquisarFuncionarios();
             abrir.Show();
             this.Hide();
         }
-
-        public void cadastrarFuncionarios()
+        public void buscaCEP(string cep)
         {
-            MySqlCommand comm = new MySqlCommand();
+            var viaCEPService = ViaCepService.Default();
+
+            try
+            {
+                var endereco = viaCEPService.ObterEndereco(cep);
+
+                txtLogradouro.Text = endereco.Logradouro;
+                txtComplemento.Text = endereco.Complemento;
+                txtCidade.Text = endereco.Localidade;
+                txtBairro.Text = endereco.Bairro;
+                cbbUf.Text = endereco.UF;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("CEP inválido. Tente novamente.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                mskCep.Clear();
+                mskCep.Focus();
+            }
+        }
+
+        private void mskCep_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                buscaCEP(mskCep.Text);
+                txtNumero.Focus();
+            }
         }
     }
 }

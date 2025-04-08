@@ -59,7 +59,7 @@ namespace LojaABC
             // txtDescricao
             // 
             this.txtDescricao.Enabled = false;
-            this.txtDescricao.Location = new System.Drawing.Point(6, 69);
+            this.txtDescricao.Location = new System.Drawing.Point(6, 62);
             this.txtDescricao.MaxLength = 100;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(523, 26);
@@ -68,7 +68,7 @@ namespace LojaABC
             // lblDescricao
             // 
             this.lblDescricao.AutoSize = true;
-            this.lblDescricao.Location = new System.Drawing.Point(6, 46);
+            this.lblDescricao.Location = new System.Drawing.Point(6, 39);
             this.lblDescricao.Name = "lblDescricao";
             this.lblDescricao.Size = new System.Drawing.Size(80, 20);
             this.lblDescricao.TabIndex = 2;
