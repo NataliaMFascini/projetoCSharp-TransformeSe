@@ -37,7 +37,7 @@ namespace LojaABC
             InitializeComponent();
             //executando desabilitar os campos
             desabilitarCampos();
-            txtNome.Text = descricao;
+            pesquisarPorNome(descricao);
             habilitarCampos_Pesquisar();
         }
 
@@ -166,6 +166,54 @@ namespace LojaABC
         {
             //executando limparCampos
             limparCampos();
+        }
+
+        //pesquisar por nome
+        public void pesquisarPorNome(string nome)
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "select * from tbFuncionarios where nome = @nome;";
+            comm.CommandType = CommandType.Text;
+
+            comm.Parameters.Clear();
+            comm.Parameters.Add("@nome", MySqlDbType.VarChar, 100).Value = nome;
+
+            comm.Connection = Conexao.obterConexao();
+
+            MySqlDataReader DR;
+            DR = comm.ExecuteReader();
+            DR.Read();
+
+            txtCodigo.Text = DR.GetInt32(0).ToString();
+            txtNome.Text = DR.GetString(1);
+            txtEmail.Text = DR.GetString(2);
+            mskCpf.Text = DR.GetString(3);
+            dtpNascimento.Value = DR.GetDateTime(4);
+            mskCelular.Text = DR.GetString(5);
+
+            string sexo = DR.GetString(6);
+            if (sexo == "F")
+            {
+                rdbFeminino.Checked = true;
+            }
+            else if (sexo == "M")
+            {
+                rdbMasculino.Checked = true;
+            }
+            else if (sexo == "N")
+            {
+                rdbNaoInformar.Checked = true;
+            }
+
+            txtLogradouro.Text = DR.GetString(7);
+            mskCep.Text = DR.GetString(8);
+            txtNumero.Text = DR.GetString(9);
+            txtComplemento.Text = DR.GetString(10);
+            txtBairro.Text = DR.GetString(11);
+            txtCidade.Text = DR.GetString(12);
+            cbbUf.Text = DR.GetString(13);
+
+            Conexao.fecharConexao();
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -318,10 +366,161 @@ namespace LojaABC
 
         private void mskCep_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
             {
                 buscaCEP(mskCep.Text);
                 txtNumero.Focus();
+            }
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            if (txtNome.Text.Equals(""))
+            {
+                erroCadastro("Nome");
+                txtNome.Focus();
+            }
+            else if (txtEmail.Text.Equals(""))
+            {
+                erroCadastro("E-mail");
+                txtEmail.Focus();
+            }
+            else if (mskCpf.Text.Equals("   .   .   -"))
+            {
+                erroCadastro("CPF");
+                mskCpf.Focus();
+            }
+            else if (mskCelular.Text.Equals("     -"))
+            {
+                erroCadastro("Celular");
+                mskCelular.Focus();
+            }
+            else if (txtLogradouro.Text.Equals(""))
+            {
+                erroCadastro("Logadouro");
+                txtLogradouro.Focus();
+            }
+            else if (mskCep.Text.Equals("     -"))
+            {
+                erroCadastro("CEP");
+                mskCep.Focus();
+            }
+            else if (txtNumero.Text.Equals(""))
+            {
+                erroCadastro("Nº");
+                txtNumero.Focus();
+            }
+            else if (txtComplemento.Text.Equals(""))
+            {
+                erroCadastro("Complemento");
+                txtComplemento.Focus();
+            }
+            else if (txtCidade.Text.Equals(""))
+            {
+                erroCadastro("Cidade");
+                txtCidade.Focus();
+            }
+            else if (txtBairro.Text.Equals(""))
+            {
+                erroCadastro("Estado");
+                txtBairro.Focus();
+            }
+            else if (cbbUf.Text.Equals(""))
+            {
+                erroCadastro("UF");
+                cbbUf.Focus();
+            }
+            else
+            {
+                if (alterarFuncionario(Convert.ToInt32(txtCodigo.Text)) == 1)
+                {
+                    MessageBox.Show("Cadastro alterado com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                    limparCampos();
+                    desabilitarCampos();
+
+                    btnNovo.Enabled = true;
+                    btnNovo.Focus();
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao alterar o cadastro do funcionário.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                }
+            }
+        }
+
+        //alterando registros do banco de dados
+        public int alterarFuncionario(int codFunc)
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "update tbFuncionarios set nome = @nome, email = @email, cpf = @cpf, dataNasc = @dataNasc, telCel = @telCel, sexo = @sexo, logradouro = @logradouro, cep = @cep, numero = @numero, complemento = @complemento, bairro = @bairro, cidade = @cidade, uf = @uf where codFunc = @codFunc;";
+            comm.CommandType = CommandType.Text;
+
+            comm.Parameters.Clear();
+            comm.Parameters.Add("@nome", MySqlDbType.VarChar, 100).Value = txtNome.Text;
+            comm.Parameters.Add("@email", MySqlDbType.VarChar, 100).Value = txtEmail.Text;
+            comm.Parameters.Add("@cpf", MySqlDbType.VarChar, 14).Value = mskCpf.Text;
+            comm.Parameters.Add("@dataNasc", MySqlDbType.Date).Value = dtpNascimento.Value;
+            comm.Parameters.Add("@telCel", MySqlDbType.VarChar, 10).Value = mskCelular.Text;
+            if (rdbFeminino.Checked)
+            {
+                comm.Parameters.Add("@sexo", MySqlDbType.VarChar, 1).Value = "F";
+            }
+            if (rdbMasculino.Checked)
+            {
+                comm.Parameters.Add("@sexo", MySqlDbType.VarChar, 1).Value = "M";
+            }
+            if (rdbNaoInformar.Checked)
+            {
+                comm.Parameters.Add("@sexo", MySqlDbType.VarChar, 1).Value = "N";
+            }
+            comm.Parameters.Add("@logradouro", MySqlDbType.VarChar, 100).Value = txtLogradouro.Text;
+            comm.Parameters.Add("@cep", MySqlDbType.VarChar, 9).Value = mskCep.Text;
+            comm.Parameters.Add("@numero", MySqlDbType.VarChar, 10).Value = txtNumero.Text;
+            comm.Parameters.Add("@complemento", MySqlDbType.VarChar, 100).Value = txtComplemento.Text;
+            comm.Parameters.Add("@bairro", MySqlDbType.VarChar, 100).Value = txtBairro.Text;
+            comm.Parameters.Add("@cidade", MySqlDbType.VarChar, 100).Value = txtCidade.Text;
+            comm.Parameters.Add("@uf", MySqlDbType.VarChar, 2).Value = cbbUf.Text;
+            comm.Parameters.Add("@codFunc", MySqlDbType.Int32).Value = codFunc;
+
+            comm.Connection = Conexao.obterConexao();
+
+            int resp = comm.ExecuteNonQuery();
+
+            Conexao.fecharConexao();
+
+            return resp;
+        }
+        //excluir registros do banco de dados
+        public int excluirFuncionario(int codFunc)
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "delete from tbFuncionarios where codFunc = @codFunc;";
+            comm.CommandType = CommandType.Text;
+
+            comm.Connection = Conexao.obterConexao();
+
+            comm.Parameters.Clear();
+            comm.Parameters.Add("@codFunc", MySqlDbType.Int32).Value = codFunc;
+
+            int resp = comm.ExecuteNonQuery();
+
+            Conexao.fecharConexao();
+
+            return resp;
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("Deseja excluir o funcionário?", "Mensagem", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (resultado == DialogResult.Yes)
+            {
+                excluirFuncionario(Convert.ToInt32(txtCodigo.Text));
+                limparCampos();
+            }
+            else
+            {
+
             }
         }
     }
