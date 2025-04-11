@@ -47,5 +47,12 @@ namespace LojaABC
             int MenuCount = GetMenuItemCount(hMenu) - 1;
             RemoveMenu(hMenu, MenuCount, MF_BYCOMMAND);
         }
+
+        private void btnUsuario_Click(object sender, EventArgs e)
+        {
+            frmGerenciarUsuarios abrirGerenciarUsuarios = new frmGerenciarUsuarios();
+            abrirGerenciarUsuarios.Show();
+            this.Hide();
+        }
     }
 }
