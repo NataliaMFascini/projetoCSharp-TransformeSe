@@ -23,11 +23,13 @@ namespace LojaABC
         [DllImport("user32")]
         static extern int GetMenuItemCount(IntPtr hWnd);
 
+        public int codFunc = 0;
+
         public frmGerenciarUsuarios()
         {
             InitializeComponent();
             desativarCampos();
-            buscaFuncionario();
+            codFunc = buscaFuncionario();
         }
 
         private void frmGerenciarUsuarios_Load(object sender, EventArgs e)
@@ -64,8 +66,10 @@ namespace LojaABC
             return resp;
         }
 
-        public void buscaFuncionario()
+        public int buscaFuncionario()
         {
+            int codFunc = 0;
+
             MySqlCommand comm = new MySqlCommand();
             comm.CommandText = "select * from tbFuncionarios;";
             comm.CommandType = CommandType.Text;
@@ -76,9 +80,13 @@ namespace LojaABC
 
             while (DR.Read())
             {
-                cbbFuncionarios.Items.Add(DR.GetInt32(0) + " - " + DR.GetString(1));
+                cbbFuncionarios.Items.Add(DR.GetString(1));
+                codFunc = DR.GetInt32(0);
             }
+
             Conexao.fecharConexao();
+
+            return codFunc;
         }
 
         public void desativarCampos()
@@ -182,6 +190,32 @@ namespace LojaABC
         public void erroCadastro(string erro)
         {
             MessageBox.Show(erro, "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void cbbFuncionarios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            pesquisaUsuarioFuncionario(codFunc);
+        }
+
+        public void pesquisaUsuarioFuncionario(int codFunc)
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "select usu.codUsu, usu.nome, usu.senha from tbUsuarios as usu inner join tbFuncionarios as func on usu.codFunc = func.codFunc where func.codFunc = @codFunc;";
+            comm.CommandType = CommandType.Text;
+
+            comm.Parameters.Clear();
+            comm.Parameters.Add("@codFunc", MySqlDbType.Int32).Value = codFunc;
+
+            comm.Connection = Conexao.obterConexao();
+            MySqlDataReader DR;
+            DR = comm.ExecuteReader();
+            DR.Read();
+
+            txtCodigo.Text = DR.GetInt32(0).ToString();
+            txtUsuario.Text = DR.GetString(1);
+            txtSenha.Text = DR.GetString(2);
+
+            Conexao.fecharConexao();
         }
     }
 }

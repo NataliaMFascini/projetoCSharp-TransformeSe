@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\natalia.mfascini\\Documents\\Visual Studio 2019\\TransformeSe\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{92C6F15B-5F45-4319-AB64-55DE53FD5414}|LojaABC\\LojaABC.csproj|c:\\users\\natalia.mfascini\\documents\\visual studio 2019\\transformese\\lojaabc\\frmgerenciarusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92C6F15B-5F45-4319-AB64-55DE53FD5414}|LojaABC\\LojaABC.csproj|solutionrelative:lojaabc\\frmgerenciarusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{92C6F15B-5F45-4319-AB64-55DE53FD5414}|LojaABC\\LojaABC.csproj|c:\\users\\natalia.mfascini\\documents\\visual studio 2019\\transformese\\lojaabc\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92C6F15B-5F45-4319-AB64-55DE53FD5414}|LojaABC\\LojaABC.csproj|solutionrelative:lojaabc\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{92C6F15B-5F45-4319-AB64-55DE53FD5414}|LojaABC\\LojaABC.csproj|c:\\users\\natalia.mfascini\\documents\\visual studio 2019\\transformese\\lojaabc\\frmgerenciarusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{92C6F15B-5F45-4319-AB64-55DE53FD5414}|LojaABC\\LojaABC.csproj|solutionrelative:lojaabc\\frmgerenciarusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{92C6F15B-5F45-4319-AB64-55DE53FD5414}|LojaABC\\LojaABC.csproj|c:\\users\\natalia.mfascini\\documents\\visual studio 2019\\transformese\\lojaabc\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{92C6F15B-5F45-4319-AB64-55DE53FD5414}|LojaABC\\LojaABC.csproj|solutionrelative:lojaabc\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,26 +23,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmGerenciarUsuarios.cs",
-              "DocumentMoniker": "C:\\Users\\natalia.mfascini\\Documents\\Visual Studio 2019\\TransformeSe\\LojaABC\\frmGerenciarUsuarios.cs",
-              "RelativeDocumentMoniker": "LojaABC\\frmGerenciarUsuarios.cs",
-              "ToolTip": "C:\\Users\\natalia.mfascini\\Documents\\Visual Studio 2019\\TransformeSe\\LojaABC\\frmGerenciarUsuarios.cs",
-              "RelativeToolTip": "LojaABC\\frmGerenciarUsuarios.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAuwKAAAABDAAAAAAAAAA==",
+              "Title": "frmLogin.cs",
+              "DocumentMoniker": "C:\\Users\\natalia.mfascini\\Documents\\Visual Studio 2019\\TransformeSe\\LojaABC\\frmLogin.cs",
+              "RelativeDocumentMoniker": "LojaABC\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\natalia.mfascini\\Documents\\Visual Studio 2019\\TransformeSe\\LojaABC\\frmLogin.cs",
+              "RelativeToolTip": "LojaABC\\frmLogin.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAADwv2QAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T17:39:56.38Z",
+              "WhenOpened": "2025-04-15T17:48:40.472Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frmGerenciarUsuarios.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\natalia.mfascini\\Documents\\Visual Studio 2019\\TransformeSe\\LojaABC\\frmGerenciarUsuarios.cs",
-              "RelativeDocumentMoniker": "LojaABC\\frmGerenciarUsuarios.cs",
-              "ToolTip": "C:\\Users\\natalia.mfascini\\Documents\\Visual Studio 2019\\TransformeSe\\LojaABC\\frmGerenciarUsuarios.cs [Design]",
-              "RelativeToolTip": "LojaABC\\frmGerenciarUsuarios.cs [Design]",
+              "Title": "frmLogin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\natalia.mfascini\\Documents\\Visual Studio 2019\\TransformeSe\\LojaABC\\frmLogin.cs",
+              "RelativeDocumentMoniker": "LojaABC\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\natalia.mfascini\\Documents\\Visual Studio 2019\\TransformeSe\\LojaABC\\frmLogin.cs [Design]",
+              "RelativeToolTip": "LojaABC\\frmLogin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T17:10:17.808Z",
+              "WhenOpened": "2025-04-15T17:48:35.758Z",
               "EditorCaption": " [Design]"
             }
           ]
