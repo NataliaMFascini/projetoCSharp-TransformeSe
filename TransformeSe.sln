@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculadora", "Calculadora\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FolhaPagamento", "FolhaPagamento\FolhaPagamento.csproj", "{EB1CE804-98DE-4EDE-A295-8589147B4694}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoDataGridView", "ProjetoDataGridView\ProjetoDataGridView.csproj", "{29FC91AB-A255-4F9A-8CF0-B0B56DB56A73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{EB1CE804-98DE-4EDE-A295-8589147B4694}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB1CE804-98DE-4EDE-A295-8589147B4694}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB1CE804-98DE-4EDE-A295-8589147B4694}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29FC91AB-A255-4F9A-8CF0-B0B56DB56A73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29FC91AB-A255-4F9A-8CF0-B0B56DB56A73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29FC91AB-A255-4F9A-8CF0-B0B56DB56A73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29FC91AB-A255-4F9A-8CF0-B0B56DB56A73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
