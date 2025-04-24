@@ -16,7 +16,7 @@ namespace ProjetoDataGridView
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDataGridView());
+            Application.Run(new frmCarregaDataGridView());
         }
     }
 }

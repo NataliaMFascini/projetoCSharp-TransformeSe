@@ -58,7 +58,7 @@
             this.perfil,
             this.pagina,
             this.selecione});
-            this.dgvDados.Location = new System.Drawing.Point(12, 213);
+            this.dgvDados.Location = new System.Drawing.Point(12, 12);
             this.dgvDados.Name = "dgvDados";
             this.dgvDados.Size = new System.Drawing.Size(760, 336);
             this.dgvDados.TabIndex = 0;
